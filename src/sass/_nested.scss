@@ -1,0 +1,224 @@
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+// Typography
+  .xlTxt{
+    font-size: $xlTxt;
+    font-family: fontBold;
+  }
+  .lTxt{
+    font-size: $lTxt;
+    font-family: fontRegular;
+  }
+  .mTxt{
+    font-size:$mTxt;
+  }
+  .sTxt{
+    font-size:$sTxt;
+  }
+  .xsTxt{
+  font-size: $xsTxt;
+  }
+
+  //Font-Family
+  .fontRegular{
+    font-family: fontRegular;
+  }
+  .paraFont{
+    font-family: paraFont;
+  }
+
+  //COLORS
+  .primaryColor{
+    color:$primaryColor;
+  }
+  .lightColor{
+    color:$lightColor;
+  }
+  .darkColor{
+    color: $darkColor;
+  }
+  .paraColor1{
+    color: $paraColor1;
+  }
+  .paraColor2{
+    color: $paraColor2;
+  }
+  .copyRightsColor{
+    color:$copyRightsColor;
+  }
+
+
+//hight
+.hight-vh{
+      height: 100vh;
+  }
+.hight-half-vh{
+  height: 50vh;
+}
+.lineHight{
+  line-height: 70px;
+}
+
+hr.yellowHr{
+  @include hr($primaryColor,5rem);
+}
+hr.whiteHr{
+  @include hr($lightColor,1rem);
+}
+
+span{
+  color: $primaryColor;
+}
+
+ul{
+  list-style: none;
+  li:hover{
+    color:$primaryColor;
+  }
+}
+header,.section3,.section5{
+  a{
+    @include link($lightColor,$sTxt);
+  }
+  a:hover{
+    @include link($primaryColor,$sTxt);
+  }
+}
+
+.logo{
+  width: 4vw;
+}
+
+.section2,.section4{
+  a{
+    @include link($darkColor,$sTxt);
+  }
+  a:hover{
+    @include link($primaryColor,$sTxt);
+  }
+}
+
+  header{
+      @include bgImg('images/section-1-1.jpg');
+      .labels{
+        transform: translateX(-29%);
+      }
+      div.centerBlock{
+        p.vertical-text{
+          writing-mode: vertical-rl;
+          text-orientation: sideways;
+          transform: rotate(-180deg);
+      }
+      .centerContent{
+        transform: translateX(-20%);
+      }
+    }
+  }
+  .section2{
+    @include bgImg('images/section-2-1.jpg');
+    .centerBlock{
+      transform: translateX(10%);
+    }
+  }
+  .section3{
+    @include bgImg('images/section-3-1.jpg');
+    .whiteBoard{
+      background-color: $lightColor;
+      height: 75vh;
+      width: 60vw;
+      transform:translateY(-3vh);
+      .fourSections{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1vw;
+        padding: 5vw;
+        >div{
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          >*{
+            margin:0 !important;
+          }
+          .svc-svg{
+            transform: scale(0.7);
+          }
+          .svc-title{
+            font-size: 1vw;
+          }
+          .svc-p{
+            font-size: 0.7vw;
+            line-height: 1.7;
+          }
+        }
+      }
+    }
+  }
+  .section4{
+    div.leftDiv{
+      @include bgImg('images/section-4-1.jpg');
+      .sectionTitle{
+        transform: translateX(30%);
+      }
+      ul{
+        li{
+          line-height: 40px;
+        }
+      }
+    }
+      div.row{
+        @for $i from 1 through 4{
+        div.item#{$i}{
+        @include bgImg('images/4-#{$i}.jpg');
+        }
+      }
+      .imgHover{
+        position: relative;
+        .inner{
+          background-color: rgba(226,219,26,0.8);
+          position: absolute;
+          width:90%;
+          height:90%;
+          left:5%;
+          top:5%;
+          opacity: 0;
+          transition: 0.15s ease-in;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          img{
+            margin-bottom: 10px;
+          }
+          &:hover{
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  .section5{
+    @include bgImg('images/section-5-1.jpg');
+    .section5Content{
+      transform: translateX(16%);
+    }
+    ul{
+          transform: translateX(39%);
+    }
+    input,textarea{
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid $lightColor;
+    }
+    button{
+      height: 40px;
+      width: 130px;
+      background-color: rgba(255,255,255,0);
+      border: 1px solid $lightColor;
+    }
+    label{
+      transform: translateX(60%);
+    }
+  }

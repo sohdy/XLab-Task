@@ -1,0 +1,214 @@
+@font-face {
+  font-family: fontBold;
+  src: url("fonts/Montserrat-Bold.ttf"); }
+
+@font-face {
+  font-family: fontRegular;
+  src: url("fonts/Montserrat-Regular.ttf"); }
+
+@font-face {
+  font-family: paraFont;
+  src: url("fonts/NotoSans-Regular.ttf"); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+.xlTxt {
+  font-size: 3.75rem;
+  font-family: fontBold; }
+
+.lTxt {
+  font-size: 2.1875rem;
+  font-family: fontRegular; }
+
+.mTxt {
+  font-size: 1rem; }
+
+.sTxt {
+  font-size: 0.875rem; }
+
+.xsTxt {
+  font-size: 0.75rem; }
+
+.fontRegular {
+  font-family: fontRegular; }
+
+.paraFont {
+  font-family: paraFont; }
+
+.primaryColor {
+  color: #e2db1a; }
+
+.lightColor {
+  color: #fff; }
+
+.darkColor {
+  color: #000; }
+
+.paraColor1 {
+  color: #6f6d70; }
+
+.paraColor2 {
+  color: #bdb2c3; }
+
+.copyRightsColor {
+  color: #9c969e; }
+
+.hight-vh {
+  height: 100vh; }
+
+.hight-half-vh {
+  height: 50vh; }
+
+.lineHight {
+  line-height: 70px; }
+
+hr.yellowHr {
+  color: #e2db1a;
+  background-color: #e2db1a;
+  height: 2px;
+  border: none;
+  width: 5rem; }
+
+hr.whiteHr {
+  color: #fff;
+  background-color: #fff;
+  height: 2px;
+  border: none;
+  width: 1rem; }
+
+span {
+  color: #e2db1a; }
+
+ul {
+  list-style: none; }
+  ul li:hover {
+    color: #e2db1a; }
+
+header a, .section3 a, .section5 a {
+  color: #fff;
+  text-decoration: none; }
+
+header a:hover, .section3 a:hover, .section5 a:hover {
+  color: #e2db1a;
+  text-decoration: none; }
+
+.logo {
+  width: 4vw; }
+
+.section2 a, .section4 a {
+  color: #000;
+  text-decoration: none; }
+
+.section2 a:hover, .section4 a:hover {
+  color: #e2db1a;
+  text-decoration: none; }
+
+header {
+  background-image: url("images/section-1-1.jpg");
+  background-size: cover; }
+  header .labels {
+    transform: translateX(-29%); }
+  header div.centerBlock p.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    transform: rotate(-180deg); }
+  header div.centerBlock .centerContent {
+    transform: translateX(-20%); }
+
+.section2 {
+  background-image: url("images/section-2-1.jpg");
+  background-size: cover; }
+  .section2 .centerBlock {
+    transform: translateX(10%); }
+
+.section3 {
+  background-image: url("images/section-3-1.jpg");
+  background-size: cover; }
+  .section3 .whiteBoard {
+    background-color: #fff;
+    height: 75vh;
+    width: 60vw;
+    transform: translateY(-3vh); }
+    .section3 .whiteBoard .fourSections {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1vw;
+      padding: 5vw; }
+      .section3 .whiteBoard .fourSections > div {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column; }
+        .section3 .whiteBoard .fourSections > div > * {
+          margin: 0 !important; }
+        .section3 .whiteBoard .fourSections > div .svc-svg {
+          transform: scale(0.7); }
+        .section3 .whiteBoard .fourSections > div .svc-title {
+          font-size: 1vw; }
+        .section3 .whiteBoard .fourSections > div .svc-p {
+          font-size: 0.7vw;
+          line-height: 1.7; }
+
+.section4 div.leftDiv {
+  background-image: url("images/section-4-1.jpg");
+  background-size: cover; }
+  .section4 div.leftDiv .sectionTitle {
+    transform: translateX(30%); }
+  .section4 div.leftDiv ul li {
+    line-height: 40px; }
+
+.section4 div.row div.item1 {
+  background-image: url("images/4-1.jpg");
+  background-size: cover; }
+
+.section4 div.row div.item2 {
+  background-image: url("images/4-2.jpg");
+  background-size: cover; }
+
+.section4 div.row div.item3 {
+  background-image: url("images/4-3.jpg");
+  background-size: cover; }
+
+.section4 div.row div.item4 {
+  background-image: url("images/4-4.jpg");
+  background-size: cover; }
+
+.section4 div.row .imgHover {
+  position: relative; }
+  .section4 div.row .imgHover .inner {
+    background-color: rgba(226, 219, 26, 0.8);
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 5%;
+    opacity: 0;
+    transition: 0.15s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .section4 div.row .imgHover .inner img {
+      margin-bottom: 10px; }
+    .section4 div.row .imgHover .inner:hover {
+      opacity: 1; }
+
+.section5 {
+  background-image: url("images/section-5-1.jpg");
+  background-size: cover; }
+  .section5 .section5Content {
+    transform: translateX(16%); }
+  .section5 ul {
+    transform: translateX(39%); }
+  .section5 input, .section5 textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff; }
+  .section5 button {
+    height: 40px;
+    width: 130px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #fff; }
+  .section5 label {
+    transform: translateX(60%); }

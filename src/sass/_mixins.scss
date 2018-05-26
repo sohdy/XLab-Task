@@ -1,0 +1,21 @@
+@mixin bgImg ($url) {
+  background-image: url($url);
+  background-size: cover
+}
+
+@mixin  hr ($color,$width){
+    color: $color;
+    background-color: $color;
+    height: 2px;
+    border: none;
+    width: $width;
+  }
+
+  @mixin link($c,$s){
+    color: $c;
+    text-decoration: none;
+  }
+  @mixin linkHover($c,$s){
+    color: $c;
+    text-decoration: none;
+  }
